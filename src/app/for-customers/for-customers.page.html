@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="yellow1">
+    <ion-buttons slot="start">
+      <ion-back-button default-href="#"></ion-back-button>
+    </ion-buttons>
+    <ion-title>สำหรับลูกค้า</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding ion-text-center" [fullscreen]="true">
+
+
+  <ion-card *ngFor="let i of items">
+    <img [src]="i.ImageURL" alt="">
+    <ion-card-header color="yellow2">
+      <ion-card-title>{{ i.name }}</ion-card-title>
+      <ion-card-title>คงเหลือในสต๊อก {{ i.quantity }}</ion-card-title>
+      <ion-card-title>ราคา {{ i.price }} บาท</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+</ion-content>

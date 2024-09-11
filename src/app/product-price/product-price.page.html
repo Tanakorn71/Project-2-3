@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="yellow1">
+    <ion-buttons slot="start">
+      <ion-back-button default-href="#"></ion-back-button>
+    </ion-buttons>
+    <ion-title>จัดการราคาสินค้า</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding ion-text-center" [fullscreen]="true">
+
+  <ion-card *ngFor="let i of items">
+    <img [src]="i.ImageURL" alt="">
+    <ion-card-header color="yellow2">
+      <ion-card-title>{{ i.name }}</ion-card-title><br>
+      <ion-input label="แก้ไขราคา" label-placement="floating" fill="outline" placeholder="ราคา {{ i.price }} บาท"></ion-input>
+    </ion-card-header>
+  </ion-card>
+
+
+</ion-content>
